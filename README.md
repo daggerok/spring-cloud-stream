@@ -1,11 +1,12 @@
-spring-cloud-stream [![build](https://travis-ci.org/daggerok/spring-cloud-stream.svg?branch=master)](https://travis-ci.org/daggerok/spring-cloud-stream)
+spring-cloud-stream [![build](https://travis-ci.org/daggerok/spring-cloud-stream.svg?branch=spring-cloud-data-flow)](https://travis-ci.org/daggerok/spring-cloud-stream)
 ====================
 
-using rabbit
+skip this branch: not implemented...
 
 ```fish
 docker-compose up -d
-gradle --parallel :producer:bootRun :consumer:bootRun
-^C
+gradle :dataflow-service:bootRun
+curl http://localhost:9393
+open http://localhost:9393/dashboard
 docker-compose down
 ```
