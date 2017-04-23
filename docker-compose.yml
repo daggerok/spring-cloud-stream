@@ -1,17 +1,20 @@
- rabbitmq:
-   image: rabbitmq
-   container_name: rabbitmq
-   ports:
-     - "5672:5672"
-
-# # http://localhost:15672
-# rabbit-admin:
-#   image: rabbitmq:3-management
-#   container_name: rabbitmq-admin
-#   environment:
-#     RABBITMQ_DEFAULT_USER: test
-#     RABBITMQ_DEFAULT_PASS: test
-#   ports:
-#     - "5672:5672"
-#     - "15672:15672"
-#     - "25672:25672"
+###rabbitmq:
+###  image: rabbitmq
+###  container_name: rabbitmq
+###  ports:
+###    - "5672:5672"
+## http://localhost:15672
+##rabbitmq:
+##  image: rabbitmq:3-management-alpine
+##  environment:
+##    RABBITMQ_DEFAULT_USER: test
+##    RABBITMQ_DEFAULT_PASS: test
+##  ports:
+##    - "5672:5672"
+##    - "15672:15672"
+##    - "25672:25672"
+rabbitmq:
+  image: rabbitmq:3-management-alpine
+  ports:
+    - "5672:5672"
+    - "15672:15672"
