@@ -1,0 +1,11 @@
+= spring-cloud-stream-playground image:https://travis-ci.org/daggerok/spring-cloud-stream.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/spring-cloud-stream"]
+
+using rabbit
+
+[source,bash]
+----
+docker-compose up -d
+gradle --parallel :producer:bootRun :consumer:bootRun
+^C
+docker-compose down
+----
