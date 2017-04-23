@@ -1,23 +1,14 @@
-buildscript {
-  repositories { mavenCentral() }
-  dependencies { classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}" }
-}
-
 plugins {
   id 'java'
   id 'idea'
   id 'eclipse'
+  id 'org.springframework.boot' version '1.5.3.RELEASE'
 }
 
-jar {
-  baseName = 'spring-cloud-stream'
-}
+[bootRun, bootRepackage, findMainClass].each { it.enabled = false }
 
 allprojects {
-  jar {
-    version = '0.0.1'
-  }
-
+  jar { version = '0.0.1' }
   sourceCompatibility = JavaVersion.VERSION_1_8
   targetCompatibility = JavaVersion.VERSION_1_8
 }

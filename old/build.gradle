@@ -1,2 +1,2 @@
 // build failing workaround:
-findMainClass.enabled = bootRepackage.enabled = false
+findMainClass.enabled = bootRepackage.enabled = bootRun.enabled = false
