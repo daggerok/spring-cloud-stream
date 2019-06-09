@@ -9,3 +9,7 @@ gradle --parallel :producer:bootRun :consumer:bootRun
 ^C
 docker-compose down
 ```
+
+see other repo:
+
+- [spring-cloud-function and spring-cloud-stream integration](https://github.com/daggerok/spring-cloud-function-stream-integration)
